@@ -9,3 +9,6 @@ Images created using the web app:
 <img src="application/static/images/cristiano_.png">
 <img src="application/static/images/hitler_tak.png">
 <img src="application/static/images/gandhi_tak.png">
+<img src="application/static/images/gandhi_in_.png">
+<img src="application/static/images/joseph_sta.png">
+<img src="application/static/images/messi_wear.png">

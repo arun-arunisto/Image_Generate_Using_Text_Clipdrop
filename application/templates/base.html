@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</head>
+<body>
+<nav class="navbar bg-dark" data-bs-theme="dark">
+    <div class="container-fluid justify-content-start">
+        <a class="navbar-brand" href="{{ url_for('app.home') }}">Home</a>
+        <a class="navbar-brand" href="{{ url_for('app.about') }}">About</a>
+        <a class="navbar-brand" href="{{ url_for('app.api_reference') }}">API Reference</a>
+    </div>
+</nav>
+<div class="card text-center" style="border:none;">
+    <div class="card-body">
+        <h2 class="card-title">{% block heading %} {% endblock %}</h2>
+    </div>
+</div>
+<div class="card">
+    <div class="card-body">
+        <hr>
+    </div>
+</div>
+<div class="card" style="border:none;">
+    <center>
+        <div class="card-body" style="width: 75%;">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </center>
+</div>
+<div class="card" style="border:none;">
+    <div class="card-body">
+        <center>
+            {% block images %}
+            {% endblock %}
+        </center>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %} Text To Image Generate {% endblock %}
+{% block heading %} <span style="color:blue;">TEXT</span> 2 <span style="color:red;">IMAGE</span> {% endblock %}
+{% block content %}
+<form action="image_generate" method="post">
+    <div class="mb-3">
+        <input type="text" class="form-control" placeholder="Text to generate an image" name="text_to_image">
+    </div>
+    <div class="mb-3">
+        <button type="submit" class="btn btn-primary mb-3">Generate Image</button>
+    </div>
+</form>
+{% endblock %}
+{% block images %}
+{% if data %}
+{% for i in data %}
+<img src="{{url_for('app.static', filename='images/')}}{{i.output_image}}" class="img-fluid" alt="images">
+{% endfor %}
+{% endif %}
+{% endblock %}
